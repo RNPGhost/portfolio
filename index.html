@@ -10,16 +10,16 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="menubar" ng-app="">
-      <div class="dropdown" ng-init="showGames=false" ng-mouseenter="showGames=true" ng-mouseleave="showGames=false">
-        <div class="dropbtn" ng-click="showGames=!showGames">Games</div>
-        <div class="dropdown-content" ng-show="showGames">
-          <a href="?page=20-lights-out">Lights Out (Turn Based Puzzle Game)</a>
-          <a href="?page=30-2dv">2DV (Multiplayer FPS)</a>
-          <a href="?page=40-into-the-night">Into The Night (Mobile Game)</a>
-          <a href="?page=50-freedom">Freedom (Portal 2 Level)</a>
-          <a href="?page=60-one-small-step">One Small Step (WIP RPG)</a>
-          <a href="?page=70-football-simulator">Football Simulator</a>
+    <div id="menubar" ng-app="Portfolio">
+      <div class="dropdown" ng-controller="dropdownController" ng-mouseenter="showDropdownContent=true" ng-mouseleave="showDropdownContent=false">
+        <div class="dropbtn" ng-click="showDropdownContent=!showDropdownContent">Games</div>
+        <div class="dropdown-content" ng-show="showDropdownContent">
+          <a href="/games/lights_out">Lights Out</a>
+          <a href="/games/2dv">2DV</a>
+          <a href="/games/into_the_night">Into The Night</a>
+          <a href="/games/freedom">Freedom</a>
+          <a href="/games/one_small_step">One Small Step</a>
+          <a href="/games/football_simulator">Football Simulator</a>
         </div>
       </div>
       <div class="dropdown"><a class="dropbtn">About</a></div>
@@ -53,5 +53,11 @@
         of it.
       </p>
     </div>
+    <script>
+	  var app = angular.module("Portfolio", []);
+	  app.controller("dropdownController", function($scope) {
+	    $scope.showDropdownContent = false;
+	  });
+	</script>
   </body>
 </html>
