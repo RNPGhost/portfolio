@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <head>
+    <title>Sam Hutton - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="menubar" ng-app="">
+      <div class="dropdown" ng-init="showGames=false" ng-mouseenter="showGames=true" ng-mouseleave="showGames=false">
+        <div class="dropbtn" ng-click="showGames=!showGames">Games</div>
+        <div class="dropdown-content" ng-show="showGames">
+          <a href="?page=20-lights-out">Lights Out (Turn Based Puzzle Game)</a>
+          <a href="?page=30-2dv">2DV (Multiplayer FPS)</a>
+          <a href="?page=40-into-the-night">Into The Night (Mobile Game)</a>
+          <a href="?page=50-freedom">Freedom (Portal 2 Level)</a>
+          <a href="?page=60-one-small-step">One Small Step (WIP RPG)</a>
+          <a href="?page=70-football-simulator">Football Simulator</a>
+        </div>
+      </div>
+      <div class="dropdown"><a class="dropbtn">About</a></div>
+    </div>
+    <div id="header">      
+      <h1>Sam Hutton</h1>
+      <h2>Portfolio</h2>      
+    </div>
+    <div id="content">
+      <img src="images/samhutton.jpg" />
+      <p>
+        I am currently working as a Software Developer, having completed a four year
+        Masters Degree in Computer Science at Oxford University. This combination of
+        theoretical and industry experience has given me the skills and confidence 
+        needed to design and develop my own games, such as the FPS '2DV' and the turn
+        based puzzle mobile game 'Lights Out'.
+      </p>
+      <p>
+        Ever since peering over my dad’s shoulder as he played the first Tomb Raider
+        on PC, I’ve been fascinated by games. I now spend the vast majority of my
+        free time playing, watching, analyzing, designing and developing games. I
+        particularly enjoy RPGs such as 'The Elder Scrolls: Skyrim' and the Dark
+        Souls series, as well as FPSs such as the Battlefield series.
+      </p>
+      <p>
+        When not gaming, I spend my time dancing, kayaking and practicing martial
+        arts. I have competed with the Oxford University Dancesport Team in Ballroom
+        and Latin dances as well as Salsa, and have been teaching Salsa classes for
+        the last two years. In 2014, I took part in a 10 hour continuous dance
+        marathon to help raise money for Cancer Research UK, and loved every second
+        of it.
+      </p>
+    </div>
+  </body>
+</html>
